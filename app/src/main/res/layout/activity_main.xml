@@ -11,7 +11,7 @@
     tools:context="dev.englishdoc.MainActivity">
 
     <Button
-        android:text="LOGIN"
+        android:text="@string/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="98dp"
@@ -29,7 +29,7 @@
         android:layout_marginBottom="13dp"
         android:layout_above="@+id/txtPassword"
         android:layout_alignStart="@+id/txtPassword"
-        android:hint="Username" />
+        android:hint="@string/username" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -40,7 +40,7 @@
         android:layout_marginBottom="32dp"
         android:layout_above="@+id/btnLogin"
         android:layout_centerHorizontal="true"
-        android:hint="Password" />
+        android:hint="@string/password" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -49,4 +49,24 @@
         android:layout_above="@+id/txtPassword"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="79dp" />
+
+    <TextView
+        android:text="@string/forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="61dp"
+        android:id="@+id/txtForget"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/btnLogin" />
+
+    <TextView
+        android:text="@string/create_new_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:id="@+id/txtRegister"
+        android:onClick="Register"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/txtForget" />
+
 </RelativeLayout>

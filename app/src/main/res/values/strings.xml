@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">EnglishDoc</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="register">REGISTER</string>
+    <string name="login">LOGIN</string>
+    <string name="nama">Nama</string>
+    <string name="email">Email</string>
+    <string name="save">SAVE</string>
+    <string name="cancel">CANCEL</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="phone">Phone</string>
+    <string name="signup">SIGNUP</string>
+    <string name="forget_password">Forget Password ?</string>
+    <string name="create_new_account">Create new account</string>
 </resources>
