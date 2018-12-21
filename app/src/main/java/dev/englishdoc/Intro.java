@@ -21,9 +21,15 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import dev.englishdoc.fragment.introEssay;
+import dev.englishdoc.fragment.introIncrease;
 import dev.englishdoc.fragment.introLearning;
+import dev.englishdoc.fragment.introPlanning;
+import dev.englishdoc.fragment.introSharing;
 
-public class Intro extends AppCompatActivity implements introLearning.OnFragmentInteractionListener{
+public class Intro extends AppCompatActivity implements introLearning.OnFragmentInteractionListener,
+        introPlanning.OnFragmentInteractionListener, introSharing.OnFragmentInteractionListener, introEssay.OnFragmentInteractionListener,
+        introIncrease.OnFragmentInteractionListener{
 
     public ViewPager viewPager;
     private LinearLayout dotsLayout;
@@ -51,7 +57,11 @@ public class Intro extends AppCompatActivity implements introLearning.OnFragment
         // layout xml slide 1 sampai 4
         // add few more layouts if you want
         layouts = new int[]{
-                R.layout.fragment_intro_learning};
+                R.layout.fragment_intro_learning,
+                R.layout.fragment_intro_sharing,
+                R.layout.fragment_intro_planning,
+                R.layout.fragment_intro_increase,
+                R.layout.fragment_intro_essay};
 
         // tombol dots (lingkaran kecil perpindahan slide)
         addBottomDots(0);
@@ -210,7 +220,14 @@ public class Intro extends AppCompatActivity implements introLearning.OnFragment
                 case 0:
                     // position fragment
                     return new introLearning();
-
+                case 1:
+                    return new introSharing();
+                case 2:
+                    return new introPlanning();
+                case 3:
+                    return new introIncrease();
+                case 4:
+                    return new introEssay();
             }
 
             return PlaceholderFragment.newInstance(position + 1);
@@ -219,7 +236,7 @@ public class Intro extends AppCompatActivity implements introLearning.OnFragment
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 1;
+            return 5;
         }
     }
 }
